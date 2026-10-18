@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920pt" height="1080pt" viewBox="0 0 1920 1080" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="1080" >
+<stop offset="0" style="stop-color:rgb(95.294118%,96.470588%,98.431373%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(92.54902%,94.509804%,97.254902%);stop-opacity:1;"/>
+</linearGradient>
+<radialGradient id="radial0" gradientUnits="userSpaceOnUse" cx="1600" cy="200" fx="1600" fy="200" r="600" >
+<stop offset="0.0833333" style="stop-color:rgb(85.490196%,91.372549%,99.607843%);stop-opacity:0.7;"/>
+<stop offset="1" style="stop-color:rgb(95.294118%,96.470588%,98.431373%);stop-opacity:0;"/>
+</radialGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="700" y2="1080" >
+<stop offset="0" style="stop-color:rgb(82.352941%,88.627451%,97.254902%);stop-opacity:0.85;"/>
+<stop offset="0.5" style="stop-color:rgb(87.058824%,91.764706%,98.823529%);stop-opacity:0.75;"/>
+<stop offset="1" style="stop-color:rgb(90.196078%,93.72549%,98.431373%);stop-opacity:0.4;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="100" y1="200" x2="500" y2="900" >
+<stop offset="0" style="stop-color:rgb(78.431373%,86.27451%,96.078431%);stop-opacity:0.5;"/>
+<stop offset="1" style="stop-color:rgb(88.235294%,92.941176%,98.823529%);stop-opacity:0.1;"/>
+</linearGradient>
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="1400" y1="700" x2="1920" y2="1080" >
+<stop offset="0" style="stop-color:rgb(87.843137%,92.54902%,98.823529%);stop-opacity:0.4;"/>
+<stop offset="1" style="stop-color:rgb(83.921569%,89.803922%,98.039216%);stop-opacity:0.6;"/>
+</linearGradient>
+<radialGradient id="radial1" gradientUnits="userSpaceOnUse" cx="960" cy="540" fx="960" fy="540" r="500" >
+<stop offset="0.2" style="stop-color:rgb(100%,100%,100%);stop-opacity:0.5;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,100%);stop-opacity:0;"/>
+</radialGradient>
+</defs>
+<g id="surface1">
+<rect x="0" y="0" width="1920" height="1080" style="fill:url(#linear0);stroke:none;"/>
+<rect x="0" y="0" width="1920" height="1080" style="fill:url(#radial0);stroke:none;"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 0 0 L 450 0 C 680 280 580 700 320 1080 L 0 1080 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0 150 C 380 260 420 680 180 1080 L 0 1080 Z M 0 150 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 1920 600 C 1650 750 1720 980 1580 1080 L 1920 1080 Z M 1920 600 "/>
+<rect x="0" y="0" width="1920" height="1080" style="fill:url(#radial1);stroke:none;"/>
+</g>
+</svg>
