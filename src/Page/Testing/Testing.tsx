@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import test from '../../Style/Testing.module.css';
+import { UserStore, type User } from '../../Zustand/Store/ZustandStore';
 
 type TimeLeft = {
     days: number;
@@ -12,10 +13,12 @@ type TimeLeft = {
 const Testing = () => {
 
     const date = new Date("2026-10-19T07:30:00+05:30").getTime();
+    const testing = UserStore((state: User) => state.setTesting);
 
     const calcualteTimeLeft = () => {
         const differ = date - Date.now();
         if(differ < 0){
+            testing(false);            
             return { days : 0, hours: 0, minutes: 0, seconds: 0}
         }
 

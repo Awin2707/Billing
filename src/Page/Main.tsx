@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
 import Testing from "./Testing/Testing";
+import { UserStore, type User } from "../Zustand/Store/ZustandStore";
 
 const Main = () => {
-    const[test, setTest] = useState<boolean>(false);
 
-    useEffect(() => {
-        setTest(true);
-    },[]);
+    const testUser = UserStore((state: User) => state.testing);
 
     return(
         <>
-        { console.log(test)}
-            {test ? <Testing/> : null}
+        {console.log(testUser)}
+            {testUser ? <Testing/> : null}
         </>
     )
 }
