@@ -13,3 +13,138 @@
     background-color: #fafafa;
     border-radius: 25px;
 }
+/* Container Background */
+.homemain {
+  background-color: #f3f3f6; /* Main outer greyish background */
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Navbar Wrapper */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Logo & Brand Container */
+.navbar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Brand Heading Label */
+.heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+}
+
+/* Center Navigation Group */
+.subbackground {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 4px;
+  border-radius: 9999px;
+  gap: 4px;
+}
+
+/* Individual Navigation Link / Tab */
+.nav_item {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav_items {
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  margin: 0px 10px;
+  transition: all 0.2s ease;
+}
+
+.nav_item:hover {
+  color: #111827;
+}
+
+/* Active Nav Item (Apply className={`${main.nav_item} ${main.active}`} to your active tab) */
+.active {
+  background-color: #111315;
+  color: #ffffff !important;
+}
+
+.active_circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White active circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.lefts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.lefts .user_name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827; /* Dark primary text */
+  cursor: pointer;
+}
+
+.lefts .user_email {
+  font-size: 11px;
+  font-weight: 400;
+  color: #9ca3af; /* Muted grey secondary text */
+  cursor: pointer;
+}
+.top{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: start;
+}
+/* User Profile Container (Avatar + Text) */
+.user_profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 4px;
+}
+
+/* Circular Avatar Wrapper */
+.avatar_wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
