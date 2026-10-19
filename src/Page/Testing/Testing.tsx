@@ -12,7 +12,7 @@ type TimeLeft = {
 
 const Testing = () => {
 
-    const date = new Date("2026-10-19T07:30:00+05:30").getTime();
+    const date = new Date("2026-10-21T07:30:00+05:30").getTime();
     const testing = UserStore((state: User) => state.setTesting);
 
     const calcualteTimeLeft = () => {
