@@ -12,8 +12,8 @@ const Home = () => {
         { name: 'Reports' },
     ]
 
-    const [tab, setTab] = useState<String>('Dashboard');
-    const [bar, setbar] = useState<Number>(0);
+    const [tab, setTab] = useState<string>('Dashboard');
+    const [bar, setbar] = useState<number>(0);
 
     return (
         <div className={main.homemain}>
