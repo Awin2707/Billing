@@ -1,4 +1,3 @@
-import React from 'react'
 import config from '../../config/config.json'
 import Card from './CardView/Card'
 import { ShieldCheck, Zap, Server, Clock, FileText, RefreshCw, BellRing, CreditCard, BarChart3, Check } from 'lucide-react';

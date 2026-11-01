@@ -1,5 +1,6 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState } from 'react';
 import inv from '../../Style/Invoice.module.css';
+import type { ChangeEvent } from 'react';
 
 interface LineItem {
   id: string;
