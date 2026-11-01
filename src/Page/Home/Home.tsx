@@ -1,5 +1,5 @@
 import main from '../../Style/Register.module.css';
-import config from '../../Config/Config.json';
+import config from '../../config/config.json';
 import { useState } from 'react';
 import { Bell, Settings, User } from 'lucide-react';
 const Home = () => {
