@@ -1,11 +1,438 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Use 100% instead of 100vw to prevent scrollbar overflow bugs */
 body,
 #root {
-  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* Fixed gradient covering the full background seamlessly */
+  background: radial-gradient(900px 500px at 80% 0%, #0B2F8A 0%, transparent 60%), #040E2A;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font: 500 15px 'Poppins', sans-serif;
+  cursor: pointer;
+  color: #fafafa;
+  box-shadow: 0 5px 13px #2878f040;
+  background: transparent;
+  border-color: #3E63C4;
+  box-shadow: none;
+}
+
+.signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font: 500 15px 'Poppins', sans-serif;
+  cursor: pointer;
+  background: #0048D0;
+  color: #fafafa;
+  box-shadow: 0 5px 13px #2878f040;
+}
+
+.signup-btn:hover {
+  background: #003fb5;
+  box-shadow: 0 6px 16px #2878f040;
+}
+
+.signup-btn:focus-visible {
+  outline: 2px solid #004dda;
+  outline-offset: 2px;
+}
+
+/* Login: same shape, outlined */
+.signup-btn-outline {
+  background: transparent;
+  color: #004dda;
+  border-color: #004dda;
+  box-shadow: none;
+}
+
+.signup-btn-outline:hover {
+  background: #004dda;
+  color: #fafafa;
+}
+
+.nav-font {
+  font-size: 14px;
+  color: #C5D4F5;
+  text-decoration: none;
+}
+
+.background-hero {
+  color: #fff;
+  padding-bottom: 22px;
+}
+
+.letter {
+  color: #B9C9EE;
+  max-width: 460px;
+  margin: 0 0 28px;
+}
+
+.span-h1 {
+  display: block;
+  color: #1E78F8;
+}
+
+.normal-h1 {
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.08;
+  margin: 0 0 18px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+/* Main Container Card */
+.mock {
+  width: 100%;
+  max-width: 620px;
+  background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  font-family: inherit;
+  color: #ffffff;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Mac Window Controls Header */
+.mock .top {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.mock .top .mac-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mock .top .mac-dot.red {
+  background-color: #ff5f56;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.mock .top .mac-dot.yellow {
+  background-color: #ffbd2e;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.mock .top .mac-dot.green {
+  background-color: #27c93f;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Stat Cards Section */
+.mock .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.mock .stat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  /* Prevents overflow issues */
+}
+
+.mock .stat small {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.mock .stat b {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chart Bars Section */
+.mock .bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 140px;
+  padding: 0 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 6px;
+}
+
+.mock .bars i {
+  flex: 1;
+  max-width: 48px;
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 6px 6px 0 0;
+  transition: height 0.3s ease;
+}
+
+/* Invoice Rows Section */
+.mock .rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock .row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 0;
+  gap: 12px;
+}
+
+.mock .row-item span {
+  color: #e2e8f0;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mock .row-item em {
+  font-style: normal;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.mock .row-item .status-paid {
+  color: #60a5fa;
+}
+
+.mock .row-item .status-pending {
+  color: #93c5fd;
+}
+
+.h2-heading {
+  font-size: clamp(26px, 4vw, 36px);
+  color: rgb(234, 241, 255);
+  font-weight: 700;
+}
+
+.sub-text {
+  color: #9FB0D6;
+  margin-top: 10px;
+  max-width: 520px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.5;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-4px);
+}
+
+.icon-wrapper {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.feature-card p {
+  color: #9FB0D6;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    padding: 0 16px;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 580px) {
+  .mock {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .mock .stats {
+    gap: 8px;
+  }
+
+  .mock .stat {
+    padding: 10px;
+  }
+
+  .mock .stat small {
+    font-size: 11px;
+  }
+
+  .mock .stat b {
+    font-size: 15px;
+  }
+
+  .mock .bars {
+    height: 100px;
+    gap: 4px;
+  }
+
+  .mock .row-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mock .stats {
+    grid-template-columns: 1fr;
+    /* Stack stats vertically on narrow phones */
+  }
+}
+
+.provide-section {
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* Card Styling */
+.provide-card {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.provide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Box */
+.provide-card .icon-box {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography */
+.provide-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.provide-card .card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+.section-amount{
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.section-card-pricing{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
   flex-direction: column;
-  padding: 0%;
-  margin: 0%;
-  font-family: "Poppins", sans-serif;
+  gap: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.section-card-pricing-sugg{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #3E63C4;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateZ(14px);
 }

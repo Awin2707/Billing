@@ -10,7 +10,7 @@ export interface User{
 
 export const UserStore = create<User>((set) => ({
     isdev: false,
-    testing: true,
+    testing: false,
 
     testingEnv: () => {set({testing: TestingEnv()})},
     setTesting: (value) => {set({testing: value})}
