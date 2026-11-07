@@ -2,7 +2,7 @@ import reg from '../../Style/Register.module.css';
 import config from '../../Config/Config.json';
 import { InputModal } from '../../Input/InputModal';
 import { useState } from 'react';
-import {register} from '../../Input/InputConfig.js'
+import { Register_data } from '../../Input/InputConfig';
 
 
 interface userData {
@@ -22,12 +22,16 @@ const Register = () => {
 
     return(
         <div className={reg.main} style={{backgroundImage: `url("${config.img}background.svg")`}}>
-            <form className={reg.form}>
-                <label>Create your Account</label>
+            <form className={reg.card}>
+                <div className={reg.heading}>
+                    <img alt='x-ico' src={config.img+'logo.png'} width={36} height={36} />
+                    Smart Billing
+                </div>
+                <h1>Create your Account</h1>
                 {
-                    register.map((val, id) => {
+                    Register_data.map((val, id) => {
                         return(
-                            <InputModal key={id} type={val.type} placeHolder={val.palceHolder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={} />
+                            <InputModal key={id} type={val.type} placeHolder={val.Placeholder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={val.label} />
                         )
                     })
                 }

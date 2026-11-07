@@ -1,5 +1,18 @@
 import config from '../Config/Config.json';
-export const register =[ 
+
+interface RegisterField {
+    name: string;
+    type: string;
+    Placeholder: string;
+    icon: string;
+    show_pass: boolean;
+    label: string;
+    value: string;
+    err: string;
+}
+
+
+export const Register_data:RegisterField[] =[ 
     {name: 'email', type : 'email', Placeholder : 'Enter your email id', icon: config.img + 'email.svg', show_pass: false, label: 'Email Id',value : '', err: ''},
     {name: 'name', type : 'text', Placeholder : 'Enter your Name', icon: config.img + 'name.svg', show_pass: false, label: 'Your Name', value : '', err: ''},
     {name: 'password', type : 'password', Placeholder : 'Create your password', icon: config.img + 'pass.svg', show_pass: true, label: 'Password', value : '',  err: ''},
