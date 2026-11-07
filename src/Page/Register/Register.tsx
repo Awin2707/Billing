@@ -2,6 +2,7 @@ import reg from '../../Style/Register.module.css';
 import config from '../../Config/Config.json';
 import { InputModal } from '../../Input/InputModal';
 import { useState } from 'react';
+import {register} from '../../Input/InputConfig.js'
 
 
 interface userData {
@@ -11,10 +12,6 @@ interface userData {
 
 const Register = () => {
 
-    const data = [
-        {type: "email", palceHolder: 'Enter the Email id', value: '', err: '', name: 'email'},
-        {type: "password", palceHolder: 'create your password', value: '', err: '', name: 'password'},
-    ]
 
     const [userdata, setData] = useState<userData>({email: '', pass: ''})
 
@@ -28,9 +25,9 @@ const Register = () => {
             <form className={reg.form}>
                 <label>Create your Account</label>
                 {
-                    data.map((val, id) => {
+                    register.map((val, id) => {
                         return(
-                            <InputModal key={id} type={val.type} placeHolder={val.palceHolder} err={val.err} value={val.value} name={val.name} onChange={onChange} />
+                            <InputModal key={id} type={val.type} placeHolder={val.palceHolder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={} />
                         )
                     })
                 }

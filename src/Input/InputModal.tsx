@@ -1,15 +1,19 @@
+import inps from '../Style/Register.module.css';
+
 export interface InputTypes{
     type: string,
     placeHolder: string,
     value: string,
     err: string,
     name: string,
+    label: string
     onChange: (name: string, value: string) => void
 }
 export const InputModal = (props : InputTypes) => {
 
     return( 
-        <div>
+        <div className={inps.div_name}>
+            <label className={inps.div_label}>{props?.label}</label>
             <input type={props.type} placeholder={props.placeHolder} name={props.name} onChange={(e) => props.onChange(props.name, e.target.value)} />
             {props.err && (<label>{props.err}</label>)}
         </div>

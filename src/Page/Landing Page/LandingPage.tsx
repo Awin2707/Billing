@@ -196,7 +196,7 @@ function LandingPage() {
                         <h2 className="h2-heading mt-2">Simple & Transparent Pricing</h2>
                         <p className="section-subtitle">Choose the plan that fits your needs. No hidden fees.</p>
                     </div>
-                    <div className="row">
+                    <div className="row g-4">
                         {
                             pricing && pricing.length != 0 && pricing.map((val, ind) => {
                                 return (
