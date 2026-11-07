@@ -3,7 +3,7 @@ import config from '../../Config/Config.json';
 import { InputModal } from '../../Input/InputModal';
 import { useState } from 'react';
 import { Login_data, Register_data } from '../../Input/InputConfig';
-import {UserPlus, ArrowRight} from 'lucide-react'
+import { UserPlus, ArrowRight } from 'lucide-react'
 
 
 interface userData {
@@ -53,23 +53,35 @@ const Register = () => {
                         </div>
                     </div>
                     <div className='mt-3'></div>
-                    { activeTab === false ?
+                    {activeTab === false ?
                         Register_data.map((val, id) => {
                             return (
                                 <InputModal key={id} type={val.type} placeHolder={val.Placeholder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={val.label} />
                             )
                         })
-                    
-                    :
+
+                        :
                         Login_data.map((val, id) => {
                             return (
                                 <InputModal key={id} type={val.type} placeHolder={val.Placeholder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={val.label} />
                             )
                         })
                     }
+                    <div className='mt-3'>
+                        <input type='checkbox' className='ps-4' />
+                        <label className="ps-2" style={{ color: 'rgb(148, 163, 184)' }}>
+                            {!activeTab ? (
+                                <>
+                                    I agree to the <span style={{color: 'rgb(0, 113, 227)'}}>Terms</span> and <span style={{color: 'rgb(0, 113, 227)'}}>Conditions</span>
+                                </>
+                            ) : (
+                                'Remember this device'
+                            )}
+                        </label>
+                    </div>
                     <div className={reg.btn}>
                         {activeTab === false ? 'Create Account ' : 'Sign In'}
-                        {activeTab === false ? <UserPlus size={16}/> : <ArrowRight size={16}/> }
+                        {activeTab === false ? <UserPlus size={16} /> : <ArrowRight size={16} />}
                     </div>
                 </div>
 
