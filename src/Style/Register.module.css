@@ -189,9 +189,9 @@ background-color: #f2f2f7;
 }
 .div_input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border: 1px solid rgba(226, 232, 240, 0.8);
-  border-radius: 12px;
+  border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   color: #1d1d1f;
@@ -247,4 +247,17 @@ background-color: #f2f2f7;
   position: relative;
   z-index: 10;
   padding: 2rem;
+}
+.btn{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: rgb(0, 119, 237);
+  cursor: pointer;
+  color: #fff;
+  border-radius: 24px;
+  margin-top: 24px;
 }

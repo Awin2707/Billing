@@ -2,7 +2,8 @@ import reg from '../../Style/Register.module.css';
 import config from '../../Config/Config.json';
 import { InputModal } from '../../Input/InputModal';
 import { useState } from 'react';
-import { Register_data } from '../../Input/InputConfig';
+import { Login_data, Register_data } from '../../Input/InputConfig';
+import {UserPlus, ArrowRight} from 'lucide-react'
 
 
 interface userData {
@@ -51,14 +52,25 @@ const Register = () => {
                             Create Account
                         </div>
                     </div>
-                    {
+                    <div className='mt-3'></div>
+                    { activeTab === false ?
                         Register_data.map((val, id) => {
                             return (
                                 <InputModal key={id} type={val.type} placeHolder={val.Placeholder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={val.label} />
                             )
                         })
+                    
+                    :
+                        Login_data.map((val, id) => {
+                            return (
+                                <InputModal key={id} type={val.type} placeHolder={val.Placeholder} err={val.err} value={val.value} name={val.name} onChange={onChange} label={val.label} />
+                            )
+                        })
                     }
-                    <button>Submit</button>
+                    <div className={reg.btn}>
+                        {activeTab === false ? 'Create Account ' : 'Sign In'}
+                        {activeTab === false ? <UserPlus size={16}/> : <ArrowRight size={16}/> }
+                    </div>
                 </div>
 
             </form>
