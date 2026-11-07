@@ -13,8 +13,8 @@ interface RegisterField {
 
 
 export const Register_data:RegisterField[] =[ 
-    {name: 'email', type : 'email', Placeholder : 'Enter your email id', icon: config.img + 'email.svg', show_pass: false, label: 'Email Id',value : '', err: ''},
-    {name: 'name', type : 'text', Placeholder : 'Enter your Name', icon: config.img + 'name.svg', show_pass: false, label: 'Your Name', value : '', err: ''},
-    {name: 'password', type : 'password', Placeholder : 'Create your password', icon: config.img + 'pass.svg', show_pass: true, label: 'Password', value : '',  err: ''},
-    {name: 'cpassword', type : 'password', Placeholder : 'ReEnter your password', icon: config.img + 'pass.svg', show_pass: true, label: 'ReEneter Password', value : '', err: ''}
+    {name: 'email', type : 'email', Placeholder : 'Alex', icon: config.img + 'email.svg', show_pass: false, label: 'Email Id',value : '', err: ''},
+    {name: 'name', type : 'text', Placeholder : 'xyz@gmail.com', icon: config.img + 'name.svg', show_pass: false, label: 'Your Name', value : '', err: ''},
+    {name: 'password', type : 'password', Placeholder : 'At leasr 8 Character', icon: config.img + 'pass.svg', show_pass: true, label: 'Create Password', value : '',  err: ''},
+    {name: 'cpassword', type : 'password', Placeholder : 'Re-enter Password', icon: config.img + 'pass.svg', show_pass: true, label: 'ReEnter Password', value : '', err: ''}
 ]
